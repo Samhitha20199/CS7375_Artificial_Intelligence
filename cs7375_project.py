@@ -102,17 +102,3 @@ labels = ['Randomforest Classifier', 'KNN', 'SVM', 'Logistic Regression']
 accuracy = [rfc,knn,svm,lr]
 ax.bar(labels,accuracy)
 plt.show()
-
-#plot a pie graph based on obtained accuracy scores
-import pandas as pd 
-import matplotlib.pyplot as plt
-data = [['Logistic Regression', lr], 
-        ['Random Forest', rfc], 
-        ['SVM', svm], 
-        ['KNN', knn],]
-df = pd.DataFrame(data, columns = ['Algorithm', 'Accuracy'] ) 
-plt.pie(df['Accuracy'], labels = {"Random Forest", "Logistic Regression", "SVM", 
-                             "KNN"}, 
-                               
-autopct ='% 1.1f %%', shadow = True) 
-plt.show() 
